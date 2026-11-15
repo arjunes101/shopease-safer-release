@@ -47,15 +47,12 @@ pipeline {
             steps { sh 'docker build --target runtime -t $IMAGE .' }
         }
         stage('Deploy to Staging') {
-            steps { script { deploy('shopease-staging', 8081, env.IMAGE, false) } }
+            steps { script { deploy('shopease-staging', 5000, env.IMAGE, false) } }
         }
         stage('Smoke Test Staging') {
             steps { script { smoke('shopease-staging') } }
         }
     }
-<<<<<<< HEAD:Jenkinsfile
-}
-=======
 
     post {
         always {
