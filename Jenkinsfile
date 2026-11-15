@@ -69,5 +69,3 @@ pipeline {
         cleanup { cleanWs() }
     }
 }
-
->>>>>>> 94b85ec (jenkins files updated):jenkinsfile
